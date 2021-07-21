@@ -14,7 +14,7 @@
 <AnchorPane fx:id="anchorPaneId" centerShape="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.DirectoryLocatorController">
     <children>
         <Label layoutX="29.0" layoutY="165.0" prefHeight="25.0" prefWidth="166.0" text="Production logs directory type" textAlignment="CENTER" wrapText="true" />
-        <Button layoutX="112.0" layoutY="287.0" mnemonicParsing="false" onAction="#locateDirectory" text="Choose Directory" />
+        <Button layoutX="112.0" layoutY="287.0" mnemonicParsing="false" onAction="#handleLocateDirectory" text="Choose Directory" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.jpg" />

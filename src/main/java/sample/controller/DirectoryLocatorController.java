@@ -8,7 +8,6 @@ import javafx.stage.DirectoryChooser;
 import sample.poi.extraction.ReadDirectoryFiles;
 
 import java.io.File;
-import java.io.IOException;
 
 public class DirectoryLocatorController {
     @FXML
@@ -23,7 +22,7 @@ public class DirectoryLocatorController {
     public RadioButton CSDFXId;
 
 
-    public String getDirectoryContentType() {
+    public String handleDirectoryContentType() {
         RadioButton button = (RadioButton) radioButtonToggleGroup.getSelectedToggle();
         if(button.getText().contains("Kitchen")){
             return "Kitchen";
@@ -35,7 +34,7 @@ public class DirectoryLocatorController {
     }
 
 
-    public void locateDirectory() {
+    public void handleLocateDirectory() {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("Select production log directory");
 
@@ -46,7 +45,7 @@ public class DirectoryLocatorController {
         if(file != null){
             dirLoc = file.getAbsolutePath();
             ReadDirectoryFiles readDirectoryFiles = new ReadDirectoryFiles();
-            readDirectoryFiles.readDirectoryFiles(dirLoc+"\\", getDirectoryContentType());
+            readDirectoryFiles.readDirectoryFiles(dirLoc+"\\", handleDirectoryContentType());
 
         }else {
             System.out.println("Error choosing directory");

@@ -25,6 +25,8 @@ public class ReadDirectoryFiles {
             }
             MergeFiles mergeFiles = new MergeFiles();
             mergeFiles.createFileForAnalysis(fileNames, dirLoc);
+
+            // Print documents inside directory
             WriteToDoc.getInstance().printAnalysedClients(fileNames);
 
             if(dirContents.equals("Kitchen")) {
