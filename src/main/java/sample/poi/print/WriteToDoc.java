@@ -118,6 +118,7 @@ public class WriteToDoc {
                 xwpfRun.setText("\n");
             }
 
+            // To bold the row containing "Total"
             for(XWPFTable table : document.getTables()){
                 for(XWPFTableRow row : table.getRows()){
                     for(XWPFTableCell cell : row.getTableCells()){
@@ -134,7 +135,9 @@ public class WriteToDoc {
                     }
                 }
             }
+
             document.write(out);
+
             // clearing lists
             ReadDirectoryFiles readDirectoryFiles = new ReadDirectoryFiles();
             readDirectoryFiles.clearList();
