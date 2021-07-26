@@ -20,6 +20,7 @@ public class ReadDirectoryFiles {
 
         try (DirectoryStream<Path> contents = Files.newDirectoryStream(dirPath, "*.docx")) {
 
+            // Adding content names with extension ".docx" in the fileNames
             for (Path file : contents) {
                 fileNames.add(file.getFileName().toString());
             }
