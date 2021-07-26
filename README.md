@@ -21,9 +21,17 @@ This document is analysed and then "Analysed clients.doc"; names of clients insi
 - Logins **Username**= qwerty; **Password**= 1234<br>
 
 ## Codes
-- Uses Apache POI to read MS file. <br>
-- Login method uses String equals method being a prototype. <br>
-- 
+- Uses Apache POI 4.1.1 to read MS file. 
+- DirectoryStream<Path> is used to read the contents (orders) inside the choosen production directory. 
+- Main data structure where the bread type, product name and quantity are added. <br>
+  Map<String, TreeMap<String, Integer>> finalMapOfProducts = new TreeMap <>(); in [BreadType.java](src/main/java/sample/poi/classification/BreadType.java) <br> 
+  Map<BreadName, ProductName, NumberOrdered> <br>
+- [KitchenBreakdownReader class](src/main/java/sample/poi/read/KitchenBreakdownReader.java) and [ClientOrderReader class](src/main/java/sample/poi/read/ClientOrderReader.java) reads "Combined document.docx" for analysis automatically. It is hard coded in the classes.
+- Iterator<XWPFTable> is used to read "Combined document.docx" table by table. 
+- Login method uses String equals method being a prototype.
+  
+## Project structure
+- ![image](https://github.com/qwertyfox/Orders_analyzer/blob/master/Project%20structure.png)
 
 
 ## License & Copyright
